@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Create Streamlit configuration
 mkdir -p ~/.streamlit/
 
 echo "\
@@ -7,3 +10,12 @@ enableCORS = false\n\
 headless = true\n\
 \n\
 " > ~/.streamlit/config.toml
+
+# Upgrade essential packages
+pip install --upgrade pip setuptools wheel
+
+# Install Kaggle with no build isolation to avoid build errors
+pip install kaggle --no-build-isolation
+
+# Install other dependencies
+pip install -r requirements.txt
