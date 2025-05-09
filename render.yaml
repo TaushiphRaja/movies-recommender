@@ -1,9 +1,9 @@
 services:
   - type: web
     name: movies-recommender
-    buildCommand: |
-      pip install -r requirements.txt
-    startCommand: streamlit run app.py
+    env: python
+    pythonVersion: 3.11.9
+
 
 
 
