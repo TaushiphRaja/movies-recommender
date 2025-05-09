@@ -1,7 +1,8 @@
 services:
   - type: web
     name: movies-recommender
-    env: docker
+    env: python
     plan: free
-    buildCommand: docker build -t movies-recommender .
-    startCommand: docker run -p $PORT:8501 movies-recommender
+    pythonVersion: 3.11.9
+    buildCommand: bash setup.sh
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
