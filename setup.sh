@@ -12,7 +12,7 @@ headless = true\n\
 " > ~/.streamlit/config.toml
 
 # Upgrade pip and install essential build tools
-pip install --upgrade pip setuptools wheel maturin
+pip install --upgrade pip setuptools wheel maturin scikit-build cmake
 
 # Install dependencies from requirements.txt
 pip install --no-build-isolation -r requirements.txt
